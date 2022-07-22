@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: large;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  .campaign-card {
+    margin: 16px;
+    width: 25rem;
+    // border: 1px black solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .campaign-progress,
+  .goal-achieved,
+  .total-sum {
+    //position: relative;
+    top: calc(100% - 80px);
+  }

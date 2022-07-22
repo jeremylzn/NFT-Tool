@@ -94,13 +94,19 @@ async function fetchAccountData() {
 
             if(item['error'] === false) {
                 document.getElementById("nfts").innerHTML += `
-                    <section>
-                        <h1 class="font-bold bg-yellow-500 text-white text-center rounded-t-md">${item['data']['name']}</h1>
-            
-                        <a href="https://opensea.io/assets/${nfts['data'][i]['contractAddress']}/${nfts['data'][i]['tokenId']}" target="_blank">
-                            <img class="rounded-b-md w-40 h-40" width="300" height="300" src="${item['data']['image']}" alt="${item['data']['description']}">
-                        </a>
-                    </section>
+
+                    <div class="card campaign-card">                    
+                        <div class="image-campaign">
+                            <a href="https://opensea.io/assets/${nfts['data'][i]['contractAddress']}/${nfts['data'][i]['tokenId']}" target="_blank">
+                                <img src="${item['data']['image']}" alt="${item['data']['description']}" class="rounded card-img-top img-responsive mx-auto"/>
+                            </a>
+                        </div>
+                    
+                        <div class="card-body">
+                            <h2 class="card-title title mt-2">${item['data']['name']}</h2>
+                            <!-- <p class="card-title total-sum">${item['data']['description']}</p>   -->                  
+                        </div>
+                    </div>
                 `
             } else throw new Error();
         });

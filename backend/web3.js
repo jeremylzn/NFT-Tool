@@ -47,7 +47,7 @@ async function getMetadataByContractAddressAndTokenId(contract_address, tokenId)
 
     const web3 = web3Instance()
 
-    const contract = new web3.eth.Contract(TEST_ABI, contract_address);
+    const contract = new web3.eth.Contract(ERC721_ABI, contract_address);
 
     let tokenMetadataURI = await contract.methods.tokenURI(tokenId).call()
 
@@ -63,15 +63,14 @@ async function getMetadataByContractAddressAndTokenId(contract_address, tokenId)
     } catch (error) {
         console.log("tokenMetadataURI :", tokenMetadataURI)
         console.log("error['message'] :", error['message'])
-        // console.log("error['response']['status'] :", error['response']['status'])
-        // console.log("error['response']['config']['url'] :", error['response']['config']['url'])
+        console.log("error['response']['status'] :", error['response']['status'])
+        console.log("error['response']['config']['url'] :", error['response']['config']['url'])
         // console.log("error['response']['data'] :", error['response']['data'])
-        const openSeaData = (await axios.get(`https://api.opensea.io/api/v1/asset/${contract_address}/${tokenId}`))['data'];
-
-        tokenMetadata = {image : openSeaData['image_url'],
-                        description : openSeaData['asset_contract']['description'],
-                        name : openSeaData['name'],
-                        attributes : openSeaData["traits"]};
+        // const openSeaData = (await axios.get(`https://api.opensea.io/api/v1/asset/${contract_address}/${tokenId}`))['data'];
+        // tokenMetadata = {image : openSeaData['image_url'],
+        //                 description : openSeaData['asset_contract']['description'],
+        //                 name : openSeaData['name'],
+        //                 attributes : openSeaData["traits"]};
     }
 
     if (tokenMetadata['image'].startsWith("ipfs://")) {
