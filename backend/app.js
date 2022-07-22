@@ -25,7 +25,6 @@ axiosRetry(axios, {
 
 function getWeb3Instance() {
     // let provider = new Web3.providers.HttpProvider(`https://cloudflare-eth.com`);
-    // const provider = new Web3.providers.WebsocketProvider(`ws://lemon:zfT5PAbec9LLdjus@3.236.87.153:8546/api`);
     let provider = 'wss://main-light.eth.linkpool.io/ws'
     const web3 = new Web3(provider);
     return web3
