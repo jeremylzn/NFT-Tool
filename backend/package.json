@@ -1,0 +1,30 @@
+{
+  "name": "nft-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@astrajs/collections": "^0.3.4",
+    "@astrajs/rest": "^0.3.4",
+    "axios": "^0.27.2",
+    "axios-retry": "^3.3.1",
+    "cassandra-driver": "^4.6.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.0.1",
+    "firebase": "^9.9.0",
+    "firebase-admin": "^11.0.0",
+    "nodemon": "^2.0.19",
+    "p-queue": "^7.2.0",
+    "path": "^0.12.7",
+    "web3": "^1.7.4"
+  }
+}
