@@ -125,3 +125,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+# Custom
+./backend/config/nft-tool-a6d55-firebase-adminsdk-ghzxp-fc3a459ad1.json
