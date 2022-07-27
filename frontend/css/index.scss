@@ -15,12 +15,16 @@
   
   .campaign-card {
     margin: 16px;
-    width: 25rem;
+    width: 18rem;
     // border: 1px black solid;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  .address-text {
+    font-size: 0.5em;
   }
   
   .campaign-progress,
@@ -28,6 +32,10 @@
   .total-sum {
     //position: relative;
     top: calc(100% - 80px);
+  }
+
+  .collapse-transfers{
+    width: -webkit-fill-available;
   }
 
 
@@ -66,4 +74,21 @@
     100% {
         transform: rotate(360deg);
     }
+}
+
+
+
+.little-loader-wrapper{
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px 15px;
+}
+.little-loader {
+  margin: 0 auto;
+  height: 40px;
+  width: 40px;
+  animation: rotate 0.8s infinite linear;
+  border: 5px solid firebrick;
+  border-right-color: transparent;
+  border-radius: 50%;
 }
